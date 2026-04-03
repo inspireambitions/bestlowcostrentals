@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+export const prerender = true;
+const areas = [
+  {name:"Dubai Airport (DXB)",href:"/car-rentals/dubai-airport",desc:"All 3 terminals. Meet and greet available."},
+  {name:"Dubai Marina",href:"/car-rentals/dubai-marina",desc:"Best for tourists and digital nomads."},
+  {name:"Downtown Dubai",href:"/car-rentals/downtown-dubai",desc:"Near Burj Khalifa and Dubai Mall."},
+  {name:"JBR & JLT",href:"/car-rentals/jbr",desc:"Beachside pickup. High demand in April."},
+  {name:"Business Bay",href:"/car-rentals/business-bay",desc:"Corporate clients and residents."},
+  {name:"Madinat Jumeirah",href:"/car-rentals/madinat-jumeirah",desc:"Art Dubai HQ. Book now for April 17–19."},
+  {name:"DWTC / Trade Centre",href:"/car-rentals/dwtc",desc:"Exhibition visitors and business travellers."},
+  {name:"Monthly Rental",href:"/car-rentals/monthly",desc:"Best rates for expats and digital nomads."},
+];
+---
+<Base
+  title="Cheapest Car Rentals in Dubai 2026 — Compare 50+ Companies"
+  description="Compare Dubai's cheapest car rentals from AED 35/day. No deposit options. Airport pickup. Economy, SUV, luxury and monthly rentals available."
+>
+<div class="bg-gradient-to-r from-navy to-brand text-white py-12 px-4 text-center">
+  <h1 class="text-4xl font-black mb-3">Car Rentals Dubai — Compare 50+ Companies</h1>
+  <p class="text-xl text-blue-100 mb-6">Economy from AED 35/day. SUVs from AED 120. Monthly deals available. No deposit options.</p>
+  <a href="/get-quotes" class="bg-yellow-400 text-navy px-8 py-3 rounded-lg font-black hover:bg-yellow-300 transition-colors inline-block">Get Free Quotes Now →</a>
+</div>
+
+<div class="max-w-4xl mx-auto px-4 py-10">
+  <h2 class="text-2xl font-black text-navy mb-6 text-center">Search Live Car Rental Prices</h2>
+  <div class="bg-white rounded-2xl shadow p-4">
+    <iframe
+      src="https://www.discovercars.com/engine/rent-a-car/iframe?a_aid=YOUR_AFFILIATE_ID&location=Dubai+International+Airport&lang=en&curr=AED"
+      width="100%"
+      height="450"
+      frameborder="0"
+      loading="lazy"
+      title="Compare Dubai Car Rental Prices — Discover Cars"
+    ></iframe>
+    <p class="text-xs text-gray-400 text-center mt-2">Powered by Discover Cars. Prices include insurance. <a href="/affiliate-disclosure" class="underline">Affiliate disclosure</a>.</p>
+  </div>
+</div>
+
+<div class="max-w-6xl mx-auto px-4 pb-16">
+  <h2 class="text-2xl font-black text-navy mb-6">Browse by Area</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    {areas.map(a => (
+      <a href={a.href} class="card hover:border-brand hover:border">
+        <div class="font-bold text-navy mb-1">{a.name}</div>
+        <div class="text-sm text-gray-500">{a.desc}</div>
+        <div class="text-brand text-sm font-semibold mt-2">View deals →</div>
+      </a>
+    ))}
+  </div>
+</div>
+
+<div class="max-w-3xl mx-auto px-4 pb-16 prose prose-gray">
+  <h2 class="text-2xl font-black text-navy">How to Find the Cheapest Car Rental in Dubai</h2>
+  <p>Dubai has over 800 registered car rental companies. The price difference between booking direct with one company and comparing across multiple can be 30–40%. The three factors that affect price most are: booking platform, pickup location, and rental duration.</p>
+  <p>Economy cars (Toyota Yaris, Nissan Sunny, Hyundai Accent) are the cheapest category and start from AED 35/day with smaller operators. The major chains (Hertz, Europcar, Thrifty) typically charge AED 80–120/day for the same vehicle. Our comparison includes both.</p>
+  <p>Monthly rentals offer the best per-day rate. If you need a car for 30 days or more, monthly rental packages from AED 900–1,200/month work out cheaper than daily rates even at the lowest price.</p>
+  <h3 class="font-bold text-navy">No Deposit Car Rentals in Dubai</h3>
+  <p>Many Dubai car rental companies require a security deposit of AED 1,000–3,000 blocked on your credit card. Several operators — including Octane.Rent, FastRent, and eZhire — offer no-deposit options for debit card and cash customers. We flag these clearly in our quotes.</p>
+</div>
+</Base>

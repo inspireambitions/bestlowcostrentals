@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+export const prerender = true;
+---
+<Base
+  title="Cheap Storage Units Dubai 2026 — From AED 150/month"
+  description="Compare storage unit prices in Dubai and Sharjah. Climate-controlled. Secure. Short and long term from AED 150/month."
+>
+<div class="bg-navy text-white py-12 px-4 text-center">
+  <h1 class="text-4xl font-black mb-3">Storage Units Dubai — From AED 150/Month</h1>
+  <p class="text-blue-100 mb-6 max-w-2xl mx-auto">Compare secure, climate-controlled storage units in Dubai and Sharjah. Short and long-term options. Moving between apartments? We've got you covered.</p>
+  <a href="/get-quotes?ref=storage&type=storage" class="bg-yellow-400 text-navy px-8 py-3 rounded-lg font-black hover:bg-yellow-300 transition-colors inline-block">Get Storage Quotes →</a>
+</div>
+<div class="max-w-4xl mx-auto px-4 py-10">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+    {[
+      {size:"Small (25 sq ft)", desc:"Wardrobe-sized. Perfect for seasonal items, documents, or sports equipment.", price:"From AED 150/month"},
+      {size:"Medium (50 sq ft)", desc:"One-bedroom apartment contents. Furniture, boxes, and appliances.", price:"From AED 350/month"},
+      {size:"Large (100 sq ft)", desc:"Two-bedroom apartment. Full household including large furniture items.", price:"From AED 600/month"},
+    ].map(s => (
+      <div class="card border-l-4 border-brand">
+        <div class="font-black text-navy mb-2">{s.size}</div>
+        <div class="text-sm text-gray-500 mb-3">{s.desc}</div>
+        <div class="text-brand font-bold">{s.price}</div>
+      </div>
+    ))}
+  </div>
+  <div class="prose prose-gray max-w-none">
+    <h2 class="text-2xl font-black text-navy">Storage in Dubai — What You Need to Know</h2>
+    <p>Whether you are moving between apartments, renovating, or storing furniture while travelling, self-storage in Dubai starts from AED 150/month for a small climate-controlled unit. Sharjah offers the same service for 30–40% less if you do not need frequent access.</p>
+    <p>Climate control is essential in the UAE. Summer temperatures reach 45°C with 80%+ humidity. Non-climate-controlled units will damage furniture, electronics, and clothing within weeks. Always choose climate-controlled storage — the AED 50–100/month premium protects thousands of dirhams worth of belongings.</p>
+    <p>The best storage operators include Storage Mart UAE (multiple locations), The Box Self Storage (24/7 access), and Vaults UAE (premium security). All offer month-to-month contracts with 30 days' cancellation notice.</p>
+  </div>
+  <div class="mt-10 text-center">
+    <a href="/blog/cheap-storage-units-dubai" class="text-brand font-semibold hover:underline">Read our full Dubai vs Sharjah storage price comparison →</a>
+  </div>
+</div>
+</Base>

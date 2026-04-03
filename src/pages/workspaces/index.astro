@@ -1,0 +1,228 @@
+---
+import Base from '../../layouts/Base.astro';
+export const prerender = true;
+---
+<Base
+  title="Cheap Co-Working Spaces Dubai — Hot Desks from AED 50/Day"
+  description="Compare the cheapest co-working spaces and hot desks in Dubai from AED 50/day. Flexi desks, dedicated desks, and private offices. Best for Virtual Visa holders and freelancers."
+>
+
+<div class="bg-gradient-to-br from-brand to-teal text-white py-16 px-4 text-center">
+  <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm mb-6">
+    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+    New — Dubai co-working comparison
+  </div>
+  <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+    Cheap Co-Working Spaces Dubai<br /><span class="text-yellow-300">From AED 50/Day</span>
+  </h1>
+  <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+    Compare hot desks, flexi passes, dedicated desks, and private offices across Dubai.
+    Best rates for Virtual Visa holders, freelancers, and remote workers.
+  </p>
+  <a href="#workspace-form" class="bg-yellow-400 text-navy px-8 py-4 rounded-lg font-black text-lg hover:bg-yellow-300 transition-colors inline-block shadow-lg">
+    Get Co-Working Quotes →
+  </a>
+  <p class="text-blue-200 text-sm mt-3">Free comparison. No commitment. 60 seconds.</p>
+</div>
+
+<!-- WORKSPACE TYPES -->
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-3xl font-black text-center text-navy mb-3">Choose Your Workspace</h2>
+  <p class="text-center text-gray-500 mb-10">From a day pass to a private office — Dubai has options at every price point.</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      {icon:"💺", name:"Hot Desk", desc:"Drop in any available desk. Best for occasional use — a few days per week.", price:"From AED 50/day"},
+      {icon:"🖥️", name:"Dedicated Desk", desc:"Your own fixed desk in a shared space. Lockable storage included.", price:"From AED 1,200/month"},
+      {icon:"🚪", name:"Private Office", desc:"Enclosed office for 1–6 people. Meeting room credits usually included.", price:"From AED 2,500/month"},
+      {icon:"📅", name:"Flexi Pass", desc:"10 or 20-day monthly pass. Use any day. Most flexible option for nomads.", price:"From AED 400/10 days"},
+    ].map(w => (
+      <div class="card text-center">
+        <div class="text-4xl mb-3">{w.icon}</div>
+        <h3 class="font-bold text-lg text-navy mb-2">{w.name}</h3>
+        <p class="text-sm text-gray-500 mb-3">{w.desc}</p>
+        <div class="text-teal font-bold text-sm">{w.price}</div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- BEST AREAS -->
+<section class="bg-white py-16 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-black text-navy mb-3 text-center">Best Co-Working Areas in Dubai</h2>
+    <p class="text-center text-gray-500 mb-10">Where to find the best spaces at the best prices.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {[
+        {area:"Dubai Marina & JLT", desc:"Highest concentration of co-working spaces. Walking distance to beach and restaurants. Hot desks from AED 50/day. Popular with digital nomads on the Virtual Visa.", spaces:"Letswork, NEST, A4 Space"},
+        {area:"Business Bay & DIFC", desc:"Premium business district. Best for fintech, consulting, and client-facing roles. Private offices from AED 3,000/month. Trade licence options available.", spaces:"WeWork, Regus, Servcorp"},
+        {area:"Downtown Dubai", desc:"Central location near Dubai Mall and metro. Mix of premium and mid-range options. Dedicated desks from AED 1,500/month.", spaces:"Impact Hub, Nasab, The Cribb"},
+        {area:"JVC & Al Quoz", desc:"Budget-friendly area for cost-conscious freelancers and startups. Hot desks from AED 35/day. Larger spaces available.", spaces:"Nook, Astrolabs, Make Business Hub"},
+      ].map(a => (
+        <div class="card">
+          <h3 class="font-bold text-navy text-lg mb-2">{a.area}</h3>
+          <p class="text-sm text-gray-500 mb-3">{a.desc}</p>
+          <div class="text-xs text-brand font-semibold">Popular: {a.spaces}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- PRICING TABLE -->
+<section class="max-w-4xl mx-auto px-4 py-16">
+  <h2 class="text-2xl font-black text-navy mb-6 text-center">Dubai Co-Working Price Comparison 2026</h2>
+  <div class="bg-blue-50 border border-brand rounded-2xl p-6">
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead><tr class="bg-brand text-white"><th class="p-3 text-left">Workspace Type</th><th class="p-3">Budget</th><th class="p-3">Mid-Range</th><th class="p-3">Premium</th></tr></thead>
+        <tbody>
+          {[
+            ["Hot Desk (daily)","AED 50–70","AED 75–120","AED 130–200"],
+            ["Flexi Pass (10 days/month)","AED 400–550","AED 600–850","AED 900–1,200"],
+            ["Dedicated Desk (monthly)","AED 1,200–1,600","AED 1,800–2,500","AED 2,800–4,000"],
+            ["Private Office 1–2 pax (monthly)","AED 2,500–3,500","AED 4,000–6,000","AED 7,000–12,000"],
+          ].map(r => <tr class="border-b"><td class="p-3 font-medium">{r[0]}</td><td class="p-3 text-center text-green-600 font-bold">{r[1]}</td><td class="p-3 text-center">{r[2]}</td><td class="p-3 text-center text-gray-400">{r[3]}</td></tr>)}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-gray-500 mt-3">Prices are approximate. Actual rates depend on location, amenities, and contract length.</p>
+  </div>
+</section>
+
+<!-- LEAD CAPTURE FORM -->
+<section id="workspace-form" class="max-w-lg mx-auto px-4 pb-16">
+  <div class="bg-gradient-to-br from-navy to-brand rounded-2xl p-1">
+    <form id="workspaceForm" class="bg-white rounded-xl p-8 space-y-5">
+      <h2 class="text-2xl font-black text-navy text-center mb-2">Get Free Co-Working Quotes</h2>
+      <p class="text-center text-gray-500 text-sm mb-4">Tell us what you need. We compare and send you the 3 best options.</p>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-3">What type of workspace?</label>
+        <div class="grid grid-cols-2 gap-3">
+          {[
+            {id:"hotdesk", label:"💺 Hot Desk", sub:"From AED 50/day"},
+            {id:"dedicated", label:"🖥️ Dedicated Desk", sub:"From AED 1,200/mo"},
+            {id:"private", label:"🚪 Private Office", sub:"From AED 2,500/mo"},
+            {id:"flexi", label:"📅 Flexi Pass", sub:"From AED 400/10 days"},
+          ].map(c => (
+            <label class="cursor-pointer">
+              <input type="radio" name="workspaceType" value={c.id} class="sr-only peer" required />
+              <div class="border-2 border-gray-200 rounded-xl p-3 text-center peer-checked:border-brand peer-checked:bg-blue-50 transition-all">
+                <div class="text-xl mb-1">{c.label.split(' ')[0]}</div>
+                <div class="text-xs font-semibold text-gray-700">{c.label.split(' ').slice(1).join(' ')}</div>
+                <div class="text-xs text-gray-400">{c.sub}</div>
+              </div>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Preferred area</label>
+        <select name="area" required class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand">
+          <option value="" disabled selected>Select area</option>
+          <option>Dubai Marina / JLT</option>
+          <option>Business Bay / DIFC</option>
+          <option>Downtown Dubai</option>
+          <option>JVC / Al Quoz</option>
+          <option>Deira / Bur Dubai</option>
+          <option>Any — best price wins</option>
+        </select>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">How many people?</label>
+          <select name="people" required class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand">
+            <option>Just me</option>
+            <option>2 people</option>
+            <option>3–5 people</option>
+            <option>6–10 people</option>
+            <option>10+</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">When do you need it?</label>
+          <input type="date" name="startDate" required class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand" />
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Your name</label>
+        <input type="text" name="name" required placeholder="Your name" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">WhatsApp / Phone</label>
+        <div class="flex gap-2">
+          <span class="border border-gray-300 rounded-lg px-3 py-2 text-sm bg-gray-50 text-gray-500 whitespace-nowrap">🇦🇪 +971</span>
+          <input type="tel" name="phone" required placeholder="50 123 4567" class="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand" />
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Email (optional)</label>
+        <input type="email" name="email" placeholder="you@example.com" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand" />
+      </div>
+
+      <button type="submit" id="wsSubmitBtn" class="w-full bg-brand text-white py-4 rounded-xl font-black text-lg hover:bg-navy transition-colors">
+        Get My 3 Co-Working Quotes →
+      </button>
+
+      <p class="text-center text-xs text-gray-400">No credit card. No spam. We only share your details with verified Dubai workspace providers.</p>
+
+      <div class="flex justify-center gap-6 text-xs text-gray-400">
+        <span>✓ Free to use</span>
+        <span>✓ No commitment</span>
+        <span>✓ Verified spaces only</span>
+      </div>
+    </form>
+  </div>
+
+  <div id="wsSuccessState" class="hidden bg-white rounded-2xl shadow-lg p-8 text-center mt-4">
+    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">✓</div>
+    <h2 class="text-xl font-black text-navy mb-2">Quote request sent!</h2>
+    <p class="text-gray-500 mb-6">We are finding the best co-working options for you right now.</p>
+    <div class="bg-gray-50 rounded-xl p-4 text-left space-y-3">
+      <div class="text-xs font-bold text-gray-400 uppercase tracking-wide">What happens next</div>
+      <div class="flex gap-3 text-sm"><span class="w-5 h-5 rounded-full bg-teal text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span>A workspace specialist contacts you within 2 hours</span></div>
+      <div class="flex gap-3 text-sm"><span class="w-5 h-5 rounded-full bg-teal text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span>You receive up to 3 competing workspace quotes</span></div>
+      <div class="flex gap-3 text-sm"><span class="w-5 h-5 rounded-full bg-teal text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span>You visit, pick the best deal, and start working</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO CONTENT -->
+<section class="max-w-3xl mx-auto px-4 pb-16 prose prose-gray">
+  <h2 class="text-2xl font-black text-navy">Co-Working in Dubai — What You Need to Know in 2026</h2>
+  <p>Dubai's co-working market has exploded since 2023, driven by the Virtual Work Visa programme, the rise of freelancer visas, and a wave of startups choosing flexible workspace over traditional leases. There are now over 200 co-working spaces across the city.</p>
+  <p>For Virtual Visa holders and freelancers, a co-working membership solves three problems at once: professional workspace, a business address for visa compliance, and networking with other professionals in your field. Many spaces also offer trade licence packages starting from AED 5,000/year.</p>
+  <h3 class="font-bold text-navy">Co-Working vs Renting an Office — When Co-Working Wins</h3>
+  <p>A traditional office lease in Business Bay starts from AED 40,000–60,000/year with a 12-month commitment, plus DEWA deposits, internet setup, and furniture. A co-working dedicated desk in the same area costs AED 1,500–2,500/month (AED 18,000–30,000/year) with everything included — internet, cleaning, reception, meeting rooms, and coffee. For teams under 5 people, co-working is almost always the smarter financial choice.</p>
+  <h3 class="font-bold text-navy">What to Look For</h3>
+  <ul>
+    <li>High-speed internet (100 Mbps+ for video calls and remote work)</li>
+    <li>Meeting room credits included in monthly plans</li>
+    <li>24/7 access for flexible working hours</li>
+    <li>Community events and networking opportunities</li>
+    <li>Trade licence and visa sponsorship options if needed</li>
+  </ul>
+</section>
+
+<script>
+  const today = new Date().toISOString().split('T')[0];
+  const dateInput = document.querySelector('input[name="startDate"]');
+  if (dateInput) dateInput.min = today;
+
+  document.getElementById('workspaceForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('wsSubmitBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      document.getElementById('workspaceForm').closest('.bg-gradient-to-br').classList.add('hidden');
+      document.getElementById('wsSuccessState').classList.remove('hidden');
+    }, 1500);
+  });
+</script>
+</Base>

@@ -1,0 +1,166 @@
+---
+import Base from '../layouts/Base.astro';
+export const prerender = true;
+---
+<Base
+  title="Cheapest Car Rentals & Holiday Homes in Dubai"
+  description="Compare 50+ Dubai car rental companies and holiday homes. Find the lowest prices from AED 35/day. Free quotes in 60 seconds. No deposit options."
+>
+
+<!-- HERO -->
+<section class="bg-gradient-to-br from-navy via-brand to-teal text-white py-16 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm mb-6">
+      <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+      Live quotes — Dubai's rental comparison platform
+    </div>
+    <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+      Find the Cheapest Rentals<br />in Dubai — <span class="text-yellow-300">Instantly</span>
+    </h1>
+    <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+      Compare 50+ car rental companies, holiday homes, furniture rentals and more.
+      From AED 35/day. No deposit options available.
+    </p>
+    <div class="flex justify-center gap-8 mb-8 text-sm">
+      <div><div class="text-2xl font-black text-yellow-300">50+</div><div class="text-blue-200">Companies compared</div></div>
+      <div><div class="text-2xl font-black text-yellow-300">AED 35</div><div class="text-blue-200">Lowest daily rate</div></div>
+      <div><div class="text-2xl font-black text-yellow-300">2 hrs</div><div class="text-blue-200">Average response</div></div>
+    </div>
+    <a href="/get-quotes" class="bg-yellow-400 text-navy px-8 py-4 rounded-lg font-black text-lg hover:bg-yellow-300 transition-colors inline-block shadow-lg">
+      Get My Free Quotes →
+    </a>
+    <p class="text-blue-200 text-sm mt-3">No credit card. No spam. 60 seconds.</p>
+  </div>
+</section>
+
+<!-- CATEGORY CARDS -->
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-3xl font-black text-center text-navy mb-3">What Are You Looking to Rent?</h2>
+  <p class="text-center text-gray-500 mb-10">Dubai's most affordable rental options — all compared in one place.</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+    <a href="/car-rentals" class="card group text-center hover:border-brand hover:border">
+      <div class="text-4xl mb-3">🚗</div>
+      <h3 class="font-bold text-lg text-navy mb-2">Car Rentals</h3>
+      <p class="text-sm text-gray-500 mb-3">Economy to luxury. Daily, weekly, monthly. Airport pickup available.</p>
+      <div class="text-teal font-bold text-sm">From AED 35/day →</div>
+    </a>
+    <a href="/holiday-homes" class="card group text-center hover:border-brand hover:border">
+      <div class="text-4xl mb-3">🏠</div>
+      <h3 class="font-bold text-lg text-navy mb-2">Holiday Homes</h3>
+      <p class="text-sm text-gray-500 mb-3">Furnished apartments and villas. JBR, Marina, Downtown, Palm.</p>
+      <div class="text-teal font-bold text-sm">From AED 250/night →</div>
+    </a>
+    <a href="/furniture-rental" class="card group text-center hover:border-brand hover:border">
+      <div class="text-4xl mb-3">🛋️</div>
+      <h3 class="font-bold text-lg text-navy mb-2">Furniture Rental</h3>
+      <p class="text-sm text-gray-500 mb-3">Perfect for new expats. Monthly packages from AED 500. Delivery included.</p>
+      <div class="text-teal font-bold text-sm">From AED 500/month →</div>
+    </a>
+    <a href="/workspaces" class="card group text-center hover:border-brand hover:border">
+      <div class="text-4xl mb-3">💻</div>
+      <h3 class="font-bold text-lg text-navy mb-2">Co-Working</h3>
+      <p class="text-sm text-gray-500 mb-3">Hot desks, dedicated desks, and private offices across Dubai.</p>
+      <div class="text-teal font-bold text-sm">From AED 50/day →</div>
+    </a>
+    <a href="/storage" class="card group text-center hover:border-brand hover:border">
+      <div class="text-4xl mb-3">📦</div>
+      <h3 class="font-bold text-lg text-navy mb-2">Storage Units</h3>
+      <p class="text-sm text-gray-500 mb-3">Secure, climate-controlled. Dubai and Sharjah. Short and long term.</p>
+      <div class="text-teal font-bold text-sm">From AED 150/month →</div>
+    </a>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="bg-white py-16 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-black text-navy mb-3">How It Works</h2>
+    <p class="text-gray-500 mb-12">Three steps. No hassle. No commitment.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="w-12 h-12 rounded-full bg-brand text-white font-black text-xl flex items-center justify-center mx-auto mb-4">1</div>
+        <h3 class="font-bold text-navy mb-2">Tell us what you need</h3>
+        <p class="text-sm text-gray-500">Car type, dates, pickup location, and your budget. Takes 60 seconds.</p>
+      </div>
+      <div>
+        <div class="w-12 h-12 rounded-full bg-teal text-white font-black text-xl flex items-center justify-center mx-auto mb-4">2</div>
+        <h3 class="font-bold text-navy mb-2">We find the best prices</h3>
+        <p class="text-sm text-gray-500">We compare 50+ verified Dubai rental companies and send you the top 3 quotes.</p>
+      </div>
+      <div>
+        <div class="w-12 h-12 rounded-full bg-navy text-white font-black text-xl flex items-center justify-center mx-auto mb-4">3</div>
+        <h3 class="font-bold text-navy mb-2">You book and save</h3>
+        <p class="text-sm text-gray-500">Choose the best deal. Book directly with the company. No middleman fees.</p>
+      </div>
+    </div>
+    <a href="/get-quotes" class="btn-primary mt-10 inline-block">Start Now — It's Free</a>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-3xl font-black text-center text-navy mb-3">Built for Dubai's Renters</h2>
+  <p class="text-center text-gray-500 mb-10">Whether you just landed or have been here for years.</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {[
+      {icon:"✈️", who:"Tourists & Visitors", detail:"Arriving at DXB and need a car? We find you the best no-deposit deal from AED 35/day with airport pickup."},
+      {icon:"🏠", who:"New Expats Arriving", detail:"Just relocated? Get a monthly car, furnished apartment, and furniture package — all pre-negotiated. Sorted in one afternoon."},
+      {icon:"💼", who:"Business Travellers", detail:"In Dubai for Art Dubai, the Boat Show, or a conference? Weekly car rentals with hotel delivery from AED 200."},
+      {icon:"💻", who:"Digital Nomads", detail:"On the Virtual Work Visa? We match you with monthly car and apartment packages under AED 5,000 combined."},
+      {icon:"👨‍👩‍👧", who:"Dubai Residents", detail:"Car in service? Family visiting? Need a second vehicle? Short-term budget cars from AED 35/day, no long commitment."},
+      {icon:"🏗️", who:"SMEs & Corporates", detail:"Need 3–10 cars for your team? We source 3 competing fleet quotes in 24 hours. No upfront cost to you."},
+    ].map(s => (
+      <div class="card">
+        <div class="text-3xl mb-3">{s.icon}</div>
+        <h3 class="font-bold text-navy mb-2">{s.who}</h3>
+        <p class="text-sm text-gray-500">{s.detail}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- APRIL EVENTS BANNER -->
+<section class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 mx-4 md:mx-auto max-w-6xl rounded-2xl px-8 py-8 mb-16">
+  <h2 class="text-2xl font-black text-amber-800 mb-2">🗓️ April 2026 — Peak Demand in Dubai</h2>
+  <p class="text-amber-700 mb-4">Major events this month mean car and holiday home prices spike. Book early for the best rate.</p>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+    {[
+      {date:"Apr 8–12", event:"Dubai Boat Show", loc:"Dubai Harbour"},
+      {date:"Apr 17–19", event:"Art Dubai", loc:"Madinat Jumeirah"},
+      {date:"Apr 23–26", event:"World Art Dubai", loc:"DWTC"},
+      {date:"Late April", event:"Eid al-Fitr", loc:"Citywide surge"},
+    ].map(e => (
+      <div class="bg-white rounded-lg p-3 border border-amber-200">
+        <div class="font-bold text-amber-600 text-xs">{e.date}</div>
+        <div class="font-semibold text-navy text-sm">{e.event}</div>
+        <div class="text-gray-400 text-xs">{e.loc}</div>
+      </div>
+    ))}
+  </div>
+  <a href="/get-quotes" class="btn-primary mt-6 inline-block">Get Quotes Before Prices Rise →</a>
+</section>
+
+<!-- QUICK LINKS BY AREA -->
+<section class="max-w-6xl mx-auto px-4 pb-16">
+  <h2 class="text-2xl font-black text-navy mb-6">Browse by Area</h2>
+  <div class="flex flex-wrap gap-3">
+    {[
+      ["Dubai Airport (DXB)","/car-rentals/dubai-airport"],
+      ["Dubai Marina","/car-rentals/dubai-marina"],
+      ["Downtown Dubai","/car-rentals/downtown-dubai"],
+      ["JBR","/car-rentals/jbr"],
+      ["Business Bay","/car-rentals/business-bay"],
+      ["Palm Jumeirah","/holiday-homes/palm-jumeirah"],
+      ["DWTC / Trade Centre","/car-rentals/dwtc"],
+      ["Madinat Jumeirah","/car-rentals/madinat-jumeirah"],
+      ["Monthly Car Rental","/car-rentals/monthly"],
+      ["Corporate Fleet","/corporate"],
+    ].map(([label, href]) => (
+      <a href={href} class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm font-medium text-gray-700 hover:border-brand hover:text-brand transition-colors">
+        {label}
+      </a>
+    ))}
+  </div>
+</section>
+
+</Base>

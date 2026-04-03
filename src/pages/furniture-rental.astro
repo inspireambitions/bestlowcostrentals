@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+export const prerender = true;
+---
+<Base
+  title="Furniture Rental Dubai — Best Packages for Expats 2026"
+  description="Compare furniture rental packages in Dubai from AED 500/month. Perfect for new expats and corporate relocations. Delivery, assembly, and pickup included."
+>
+<div class="bg-amber text-white py-12 px-4 text-center">
+  <h1 class="text-4xl font-black mb-3">Furniture Rental Dubai — From AED 500/Month</h1>
+  <p class="text-yellow-100 mb-6 max-w-2xl mx-auto">Just arrived in Dubai? Rent a complete furniture package while you wait for your shipment or decide what to buy. Delivery, assembly, and collection included.</p>
+  <a href="/get-quotes?ref=furniture&type=furniture" class="bg-white text-amber px-8 py-3 rounded-lg font-black hover:bg-gray-100 transition-colors inline-block">Get Furniture Rental Quotes →</a>
+</div>
+
+<div class="max-w-4xl mx-auto px-4 py-10">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+    {[
+      {pkg:"Studio Package", items:"Bed, sofa, dining table, 2 chairs, wardrobe, TV stand", price:"AED 500–650/month"},
+      {pkg:"1-Bedroom Package", items:"All studio items plus second wardrobe, bedside tables, coffee table", price:"AED 700–900/month"},
+      {pkg:"2-Bedroom Package", items:"Full living room, master + guest bedroom, dining set for 4", price:"AED 1,000–1,400/month"},
+    ].map(p => (
+      <div class="card border-l-4 border-amber">
+        <div class="font-black text-navy mb-2">{p.pkg}</div>
+        <div class="text-sm text-gray-500 mb-3">{p.items}</div>
+        <div class="text-amber font-bold">{p.price}</div>
+      </div>
+    ))}
+  </div>
+
+  <div class="prose prose-gray max-w-none">
+    <h2 class="text-2xl font-black text-navy">Why New Dubai Expats Choose Furniture Rental</h2>
+    <p>Dubai added over 200,000 new residents in 2025 alone, and that pace continues in 2026. Most arrive with limited personal effects — airlines allow one or two suitcases, and shipping a container of furniture from the UK or India takes 6–14 weeks and costs AED 15,000–40,000.</p>
+    <p>Furniture rental solves the gap. For AED 500–1,400 per month, you get a fully furnished apartment within 48 hours of arrival. When your shipment arrives or you have decided what permanent furniture to buy, you cancel with 30 days' notice and the rental company collects everything.</p>
+    <p>It is also the smarter financial choice. A basic furniture set for a Dubai apartment costs AED 8,000–15,000 to buy new. You would need to live in Dubai for 12–24 months before buying makes more financial sense than renting, assuming you are still not sure of your long-term plans.</p>
+    <h3 class="font-bold text-navy">What to Look for in a Dubai Furniture Rental Company</h3>
+    <ul>
+      <li>Delivery within 48 hours of signing the agreement</li>
+      <li>Assembly and installation included in the monthly price</li>
+      <li>30-day cancellation notice (avoid 60-day clauses)</li>
+      <li>Replacement guarantee if an item breaks through normal use</li>
+      <li>No hidden fees for stair delivery or furniture that exceeds a certain weight</li>
+    </ul>
+  </div>
+</div>
+</Base>

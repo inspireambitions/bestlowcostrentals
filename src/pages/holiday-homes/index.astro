@@ -1,0 +1,47 @@
+---
+import Base from '../../layouts/Base.astro';
+export const prerender = true;
+---
+<Base
+  title="Cheap Holiday Homes Dubai 2026 — Best Budget Apartments & Villas"
+  description="Find the cheapest holiday homes in Dubai from AED 250/night. Compare furnished apartments and villas in JBR, Marina, Downtown, Palm Jumeirah."
+>
+<div class="bg-gradient-to-r from-teal to-navy text-white py-12 px-4 text-center">
+  <h1 class="text-4xl font-black mb-3">Budget Holiday Homes Dubai — From AED 250/Night</h1>
+  <p class="text-green-100 mb-6 max-w-2xl mx-auto">Compare furnished apartments and villas across Dubai's best areas. Perfect for tourists, Eid visitors, and monthly stays.</p>
+  <a href="/get-quotes?ref=holiday-homes&type=home" class="bg-yellow-400 text-navy px-8 py-3 rounded-lg font-black hover:bg-yellow-300 transition-colors inline-block">Find Holiday Homes →</a>
+</div>
+
+<div class="max-w-4xl mx-auto px-4 py-10">
+  <div class="bg-white rounded-2xl shadow p-4 mb-10">
+    <iframe
+      src="https://www.booking.com/searchresults.html?aid=YOUR_BOOKING_AID&label=bestlowcostrentals&city=-782831&checkin=2026-04-17&checkout=2026-04-20&group_adults=2&no_rooms=1&rows=5&ss=Dubai&src=index"
+      width="100%" height="500" frameborder="0" loading="lazy"
+      title="Compare Dubai Holiday Homes — Booking.com"
+    ></iframe>
+    <p class="text-xs text-gray-400 text-center mt-2">Powered by Booking.com. <a href="/affiliate-disclosure" class="underline">Affiliate disclosure</a>.</p>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+    {[
+      {area:"JBR",href:"/holiday-homes/jbr",from:"From AED 280/night"},
+      {area:"Dubai Marina",href:"/holiday-homes/dubai-marina",from:"From AED 250/night"},
+      {area:"Downtown Dubai",href:"/holiday-homes/downtown-dubai",from:"From AED 350/night"},
+      {area:"Palm Jumeirah",href:"/holiday-homes/palm-jumeirah",from:"From AED 500/night"},
+    ].map(a => (
+      <a href={a.href} class="card text-center hover:border-teal hover:border">
+        <div class="font-bold text-navy mb-1">{a.area}</div>
+        <div class="text-sm text-teal">{a.from}</div>
+      </a>
+    ))}
+  </div>
+
+  <div class="prose prose-gray max-w-none">
+    <h2 class="text-2xl font-black text-navy">Dubai Holiday Homes — What to Expect in 2026</h2>
+    <p>Dubai's short-term rental market has over 22,000 DTCM-licensed properties ranging from studio apartments in Deira for AED 150/night to five-bedroom villas on Palm Jumeirah for AED 8,000/night. The sweet spot for budget visitors is a furnished one-bedroom apartment in JBR, Dubai Marina, or Business Bay, where prices start from AED 250–300/night with kitchen facilities included.</p>
+    <p>April is peak season in Dubai. Eid al-Fitr, Art Dubai (April 17–19), and the Boat Show (April 8–12) all drive demand simultaneously, which means prices are 20–40% higher than January. Book at least 7–10 days in advance for April stays.</p>
+    <h3 class="font-bold text-navy">Holiday Home vs Hotel — Which Is Cheaper?</h3>
+    <p>For stays of 4 nights or more, a holiday home is almost always cheaper than a hotel of equivalent quality. A 4-star hotel in JBR charges AED 600–900/night. A comparable holiday home apartment in the same area costs AED 300–450/night and includes a kitchen, washing machine, and more space — saving AED 1,200–2,700 on a week's stay.</p>
+  </div>
+</div>
+</Base>

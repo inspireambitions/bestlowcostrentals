@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+export const prerender = true;
+---
+<Base
+  title="Car Rental Dubai Airport — Cheapest DXB Airport Pickup 2026"
+  description="Compare the cheapest car rentals from Dubai International Airport (DXB). All 3 terminals. Meet and greet. From AED 35/day. No deposit options."
+>
+<div class="bg-navy text-white py-12 px-4 text-center">
+  <div class="text-sm text-blue-300 mb-2">📍 Dubai International Airport (DXB)</div>
+  <h1 class="text-4xl font-black mb-3">Car Rental Dubai Airport — From AED 35/day</h1>
+  <p class="text-blue-100 mb-6 max-w-2xl mx-auto">Compare all car rental companies at Dubai Airport Terminals 1, 2, and 3. Book your airport pickup before you land.</p>
+  <a href="/get-quotes?ref=dubai-airport" class="bg-yellow-400 text-navy px-8 py-3 rounded-lg font-black hover:bg-yellow-300 transition-colors inline-block">Get Airport Car Rental Quotes →</a>
+</div>
+
+<div class="max-w-4xl mx-auto px-4 py-10">
+  <div class="bg-white rounded-2xl shadow p-4 mb-10">
+    <iframe
+      src="https://www.discovercars.com/engine/rent-a-car/iframe?a_aid=YOUR_AFFILIATE_ID&location=Dubai+International+Airport&lang=en&curr=AED"
+      width="100%" height="420" frameborder="0" loading="lazy"
+      title="Dubai Airport Car Rental — Compare Prices"
+    ></iframe>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+    {[
+      {icon:"✈️", t:"All 3 Terminals Covered", d:"Terminal 1 (international), Terminal 2 (flydubai), and Terminal 3 (Emirates) all have car rental desks."},
+      {icon:"🕐", t:"24/7 Availability", d:"Airport car rental desks operate around the clock. No matter what time your flight lands, a car is waiting."},
+      {icon:"💳", t:"No Deposit Options", d:"Several operators offer no security deposit for debit card or cash customers. We flag these in your quotes."},
+    ].map(f => (
+      <div class="card text-center">
+        <div class="text-3xl mb-2">{f.icon}</div>
+        <div class="font-bold text-navy mb-1">{f.t}</div>
+        <div class="text-sm text-gray-500">{f.d}</div>
+      </div>
+    ))}
+  </div>
+
+  <div class="prose prose-gray max-w-none">
+    <h2 class="text-2xl font-black text-navy">Dubai Airport Car Rental — What You Need to Know</h2>
+    <p>Dubai International Airport (IATA: DXB) is the world's busiest international airport and handles over 80 million passengers annually. Car rental is available from the arrivals halls of all three terminals with no pre-booking required, though pre-booking always secures a better price.</p>
+    <p>The cheapest economy cars at Dubai Airport start from AED 35/day with smaller operators who offer delivery to the terminal. The major desks inside the airport (Hertz, Europcar, Avis, Budget, Dollar) are convenient but typically charge 40–60% more than operators with off-airport locations and free delivery.</p>
+    <h3 class="font-bold text-navy">Which Terminal Do You Need?</h3>
+    <ul>
+      <li><strong>Terminal 1:</strong> International airlines including British Airways, Air France, KLM, Lufthansa.</li>
+      <li><strong>Terminal 2:</strong> flydubai and budget airlines. Smaller car rental operation here.</li>
+      <li><strong>Terminal 3:</strong> Emirates and Qantas. Largest terminal with the most car rental options.</li>
+    </ul>
+    <p>If you are arriving on Emirates or flydubai, consider having the car delivered to your hotel or apartment instead of picking it up at the terminal — it is often AED 20–40 cheaper per day.</p>
+  </div>
+</div>
+</Base>

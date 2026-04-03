@@ -1,0 +1,105 @@
+---
+import Base from '../layouts/Base.astro';
+export const prerender = true;
+---
+<Base
+  title="Corporate Car Rental Dubai — Fleet Quotes in 24 Hours"
+  description="Need 3–10 cars for your Dubai team? We source 3 competing fleet quotes from licensed operators in 24 hours. No cost to you. Monthly rates, delivery included."
+>
+<div class="bg-navy text-white py-12 px-4 text-center">
+  <h1 class="text-4xl font-black mb-3">Corporate Car Rental Dubai</h1>
+  <p class="text-blue-100 mb-2 text-xl">3–10 cars for your team. 3 competing quotes. 24 hours.</p>
+  <p class="text-blue-200 mb-6 max-w-2xl mx-auto">We source fleet rates from multiple licensed Dubai operators so you know you are getting the best price. No cost to your company.</p>
+  <a href="#fleet-form" class="bg-yellow-400 text-navy px-8 py-3 rounded-lg font-black hover:bg-yellow-300 transition-colors inline-block">Request Fleet Quotes →</a>
+</div>
+
+<div class="max-w-4xl mx-auto px-4 py-10">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    {[
+      {icon:"🚗", t:"3 Competing Quotes", d:"We contact multiple licensed Dubai operators with your spec and return the 3 best prices within 24 hours."},
+      {icon:"💰", t:"No Cost to You", d:"We earn a broker fee from the operator when you sign. You pay the operator directly — we never touch your money."},
+      {icon:"📋", t:"Fixed Monthly Rates", d:"We confirm fixed rates for your agreed period with 30 days' cancellation notice. No surprise charges mid-contract."},
+    ].map(f => (
+      <div class="card text-center">
+        <div class="text-3xl mb-3">{f.icon}</div>
+        <div class="font-bold text-navy mb-2">{f.t}</div>
+        <div class="text-sm text-gray-500">{f.d}</div>
+      </div>
+    ))}
+  </div>
+
+  <div id="fleet-form" class="bg-white rounded-2xl shadow-lg p-8">
+    <h2 class="text-2xl font-black text-navy mb-6">Request Your Fleet Quotes</h2>
+    <form id="fleetForm" class="space-y-4">
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Company name</label>
+          <input type="text" name="company" required placeholder="Dubai Tech Ltd" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Number of cars needed</label>
+          <select name="quantity" required class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand">
+            <option value="" disabled selected>Select</option>
+            <option>1–2 cars</option>
+            <option>3–5 cars</option>
+            <option>6–10 cars</option>
+            <option>10+ cars</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Car type needed</label>
+          <select name="carType" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand">
+            <option>Economy (Yaris, Sunny)</option>
+            <option>Sedan (Camry, Altima)</option>
+            <option>SUV (RAV4, CR-V)</option>
+            <option>Mixed fleet</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Rental period</label>
+          <select name="period" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand">
+            <option>1 month</option>
+            <option>3 months</option>
+            <option>6 months</option>
+            <option>12 months</option>
+            <option>Ongoing / rolling</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Your name and WhatsApp</label>
+        <div class="grid grid-cols-2 gap-4">
+          <input type="text" name="contactName" required placeholder="Ahmed" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand" />
+          <div class="flex gap-2">
+            <span class="border border-gray-300 rounded-lg px-3 py-2 text-sm bg-gray-50 whitespace-nowrap">🇦🇪 +971</span>
+            <input type="tel" name="phone" required placeholder="50 123 4567" class="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Additional requirements</label>
+        <textarea name="notes" rows="2" placeholder="Delivery location, start date, specific models, mileage requirements..." class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand resize-none"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-navy text-white py-4 rounded-xl font-black text-lg hover:bg-brand transition-colors">
+        Request 3 Fleet Quotes in 24 Hours →
+      </button>
+      <p class="text-center text-xs text-gray-400">No commitment required. We return 3 quotes within 24 hours.</p>
+    </form>
+    <div id="fleetSuccess" class="hidden text-center py-8">
+      <div class="text-4xl mb-3">✓</div>
+      <h3 class="font-black text-navy text-xl mb-2">Fleet request received</h3>
+      <p class="text-gray-500">We will send 3 competing quotes to your WhatsApp within 24 hours.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('fleetForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('fleetSuccess').classList.remove('hidden');
+  });
+</script>
+</Base>

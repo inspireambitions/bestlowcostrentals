@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+export const prerender = true;
+const articles = [
+  {slug:"cheapest-car-rental-companies-dubai",title:"The 12 Cheapest Car Rental Companies in Dubai — Tested and Compared",excerpt:"We tested and compared 12 budget car rental companies in Dubai. Here is who offers the best price, the most transparent fees, and the most flexible policies.",cat:"Car Rental",date:"April 2026"},
+  {slug:"budget-holiday-homes-dubai-guide",title:"Budget Holiday Homes in Dubai — A Complete Guide for 2026",excerpt:"Dubai holiday homes do not have to cost a fortune. This guide covers the best areas, the cheapest platforms, and exactly how to book without paying tourist premiums.",cat:"Holiday Homes",date:"April 2026"},
+  {slug:"furniture-rental-dubai-expats",title:"Affordable Furniture Rental Dubai — Best Options for Expats",excerpt:"Arriving in Dubai with no furniture? Monthly furniture rental packages start from AED 500. Here are the best companies and what to watch out for.",cat:"Furniture",date:"April 2026"},
+  {slug:"car-under-100-dubai",title:"How to Rent a Car in Dubai Under AED 100 Per Day",excerpt:"Finding a car rental under AED 100 per day in Dubai is possible if you know where to look. This guide shows you exactly how.",cat:"Car Rental",date:"April 2026"},
+  {slug:"cheap-storage-units-dubai",title:"Cheap Storage Units in Dubai vs Sharjah — Price Comparison 2026",excerpt:"Storage units in Dubai cost 30–40% more than Sharjah. We compare prices, locations, and accessibility so you can decide what makes sense.",cat:"Storage",date:"April 2026"},
+  {slug:"dubai-virtual-visa-rental-guide",title:"Dubai Virtual Work Visa — Car and Apartment Rental Guide 2026",excerpt:"On the Dubai Virtual Work Visa? Here is how to rent a car and furnished apartment for under AED 5,000 combined per month.",cat:"Expat Guide",date:"April 2026"},
+  {slug:"car-rental-no-deposit-dubai",title:"No Deposit Car Rental Dubai — Which Companies Offer It?",excerpt:"Not everyone has AED 3,000 to block on a credit card. These Dubai car rental companies offer genuine no-deposit options for debit and cash customers.",cat:"Car Rental",date:"April 2026"},
+];
+---
+<Base
+  title="Dubai Rental Guides — Car, Home, Furniture Tips 2026"
+  description="Expert guides on Dubai car rentals, holiday homes, furniture rentals and expat arrival logistics. Save money with our free comparison tips."
+>
+<div class="bg-gray-100 py-12 px-4 text-center">
+  <h1 class="text-4xl font-black text-navy mb-3">Dubai Rental Guides</h1>
+  <p class="text-gray-500 text-lg">How to save money on every rental in Dubai — from cars to holiday homes to furniture.</p>
+</div>
+
+<div class="max-w-4xl mx-auto px-4 py-10">
+  <div class="space-y-6">
+    {articles.map(a => (
+      <a href={`/blog/${a.slug}`} class="card flex gap-6 items-start hover:border-brand hover:border group">
+        <div class="flex-1">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="tag-blue">{a.cat}</span>
+            <span class="text-xs text-gray-400">{a.date}</span>
+          </div>
+          <h2 class="text-lg font-bold text-navy group-hover:text-brand transition-colors mb-2">{a.title}</h2>
+          <p class="text-sm text-gray-500 leading-relaxed">{a.excerpt}</p>
+        </div>
+        <div class="text-brand font-bold text-sm whitespace-nowrap self-center">Read →</div>
+      </a>
+    ))}
+  </div>
+</div>
+</Base>

@@ -1,0 +1,127 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+}
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  ogImage = '/og-default.jpg',
+} = Astro.props;
+const siteName = 'Best Low Cost Rentals Dubai';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | {siteName}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:site_name" content={siteName} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": siteName,
+    "url": "https://bestlowcostrentals.com",
+    "description": "Compare the cheapest car rentals, holiday homes, furniture and equipment rentals in Dubai and the GCC.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://bestlowcostrentals.com/blog?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  })} />
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <span class="text-2xl font-black text-navy">BestLow<span class="text-teal">Cost</span>Rentals</span>
+        <span class="hidden md:block text-xs text-gray-400 mt-1">Dubai</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="/car-rentals" class="text-gray-600 hover:text-brand transition-colors">Car Rentals</a>
+        <a href="/holiday-homes" class="text-gray-600 hover:text-brand transition-colors">Holiday Homes</a>
+        <a href="/furniture-rental" class="text-gray-600 hover:text-brand transition-colors">Furniture</a>
+        <a href="/workspaces" class="text-gray-600 hover:text-brand transition-colors">Co-Working</a>
+        <a href="/blog" class="text-gray-600 hover:text-brand transition-colors">Guides</a>
+        <a href="/corporate" class="text-gray-600 hover:text-brand transition-colors">Corporate</a>
+        <a href="/get-quotes" class="btn-primary text-sm px-4 py-2">Get Free Quotes</a>
+      </nav>
+      <a href="/get-quotes" class="md:hidden btn-primary text-sm px-4 py-2">Get Quotes</a>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="bg-navy text-white mt-20">
+    <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div>
+        <div class="font-black text-lg mb-3">BestLowCostRentals</div>
+        <p class="text-sm text-blue-200 leading-relaxed">Dubai's free rental comparison platform. Cars, holiday homes, furniture and more.</p>
+      </div>
+      <div>
+        <div class="font-semibold mb-3 text-teal">Car Rentals</div>
+        <ul class="space-y-2 text-sm text-blue-200">
+          <li><a href="/car-rentals/dubai-airport" class="hover:text-white">Dubai Airport</a></li>
+          <li><a href="/car-rentals/monthly" class="hover:text-white">Monthly Rentals</a></li>
+          <li><a href="/car-rentals/dubai-marina" class="hover:text-white">Dubai Marina</a></li>
+          <li><a href="/car-rentals/downtown-dubai" class="hover:text-white">Downtown Dubai</a></li>
+          <li><a href="/car-rentals/jbr" class="hover:text-white">JBR</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-3 text-teal">Holiday Homes</div>
+        <ul class="space-y-2 text-sm text-blue-200">
+          <li><a href="/holiday-homes/palm-jumeirah" class="hover:text-white">Palm Jumeirah</a></li>
+          <li><a href="/holiday-homes/jbr" class="hover:text-white">JBR</a></li>
+          <li><a href="/holiday-homes/downtown-dubai" class="hover:text-white">Downtown Dubai</a></li>
+          <li><a href="/holiday-homes/dubai-marina" class="hover:text-white">Dubai Marina</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-3 text-teal">Company</div>
+        <ul class="space-y-2 text-sm text-blue-200">
+          <li><a href="/blog" class="hover:text-white">Guides & Tips</a></li>
+          <li><a href="/corporate" class="hover:text-white">Corporate Fleet</a></li>
+          <li><a href="/get-quotes" class="hover:text-white">Get Free Quotes</a></li>
+          <li><a href="/affiliate-disclosure" class="hover:text-white">Affiliate Disclosure</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-blue-900 py-4 text-center text-xs text-blue-400">
+      &copy; {new Date().getFullYear()} BestLowCostRentals.com — Dubai, UAE. All prices in AED unless stated.
+    </div>
+  </footer>
+
+  <script>
+    const ref = new URLSearchParams(window.location.search).get('ref');
+    if (ref) {
+      sessionStorage.setItem('blcr_ref', ref);
+      document.querySelectorAll('a[href*="/get-quotes"]').forEach(a => {
+        const url = new URL(a.href);
+        if (!url.searchParams.get('ref')) {
+          url.searchParams.set('ref', ref);
+          a.href = url.toString();
+        }
+      });
+    }
+  </script>
+</body>
+</html>
